@@ -100,6 +100,17 @@
 /sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d300/leds(/.*)?             u:object_r:sysfs_leds:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds/white(/.*)?       u:object_r:sysfs_leds:s0
 
+# Ramoops - Dev
+/dev/access-metadata u:object_r:ramoops_device:s0
+/dev/access-ramoops u:object_r:ramoops_device:s0
+
+# Ramoops - Exec
+/vendor/bin/init\.ramoops\.sh u:object_r:ramoops_exec:s0
+/vendor/bin/ramoops u:object_r:ramoops_exec:s0
+
+# Ramoops - Data
+/data/vendor_ce/[0-9]+/ramoops(/.*)? u:object_r:ramoops_vendor_data_file:s0
+
 # Mlipay
 /vendor/bin/mlipayd@1\.1 u:object_r:hal_mlipay_default_exec:s0
 
