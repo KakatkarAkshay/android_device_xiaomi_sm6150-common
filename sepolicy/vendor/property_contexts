@@ -59,6 +59,9 @@ vendor.debug.rs.                    u:object_r:public_vendor_default_prop:s0
 # Init
 vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
 
+# Thermal
+vendor.thermal.config       u:object_r:vendor_thermal_prop:s0
+
 # Power
 vendor.powerhal.state      u:object_r:power_prop:s0
 vendor.powerhal.audio      u:object_r:power_prop:s0
